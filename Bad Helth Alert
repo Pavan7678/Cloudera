@@ -1,0 +1,5 @@
+We cannot do anything about this as we hitting a limitation.
+The cloudera triggers (long-running) would make the complete entity (in our case YARN) as bad (health:bad) based on how we have configured the trigger.
+So in our scenario if we already have a long-running job which has triggered an alert (health:bad for YARN), it will not trigger another alert for a different YARN application.
+When the YARN service becomes healthy (for a case when there is no long-running job), only then we can expect a new alert to get triggered for a new long-running application.
+Since we are hitting this limitation with CM based trigger, we cannot have accurate alerting for all the long-running jobs for a cluster.
