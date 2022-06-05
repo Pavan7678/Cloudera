@@ -1,0 +1,18 @@
+Need to check which services we need a restart after decommissioning the navigator metadata server.
+
+dependencies services need to restart for stale config
+
+1: HDFS
+
+2: Hive
+
+3: Impala
+
+4: Yarn
+
+5: Oozie 
+
+6: Spark
+
+ 
+Ref doc :- https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cn_admcfg_nms_intro.html#nms-extraction-process
